@@ -1,0 +1,298 @@
+.edit-post-layout__content .acf-input-wrap.acfe-field-code-editor {
+    height: 200px;
+}
+.edit-post-layout__content ul.acf-image-select-list, .edit-post-layout__content ul.acf-radio-list {
+    display: flex;
+}
+.edit-post-layout__content .acf-field-button-group[data-name="number_of_cards"] .acf-button-group label {
+    border-radius: 50%;
+    background: #e1e1e1;
+    margin-right: 5%;
+}
+.edit-post-layout__content .acf-field-button-group[data-name="number_of_cards"] .acf-button-group label.selected {
+    background: #41b295;
+    border: 1px solid #41b295;
+}
+.edit-post-layout__content .acf-field-button-group[data-name="number_of_cards"] .acf-button-group label.selected:hover {
+    color: #ffffff;
+}
+.edit-post-layout__content .acf-field-button-group[data-name="number_of_cards"] .acf-button-group label:hover {
+    border: 1px solid #41b295;
+    color: #41b295;
+}
+.edit-post-layout__content .acf-field.acf-field-flexible-content .acf-label label {
+    font-size: 16px;
+    color: #1B1B1B;
+    font-weight: bold;
+    letter-spacing: 0.7px;
+    margin-bottom: 20px;
+}
+.edit-post-layout__content .acf-field.acf-field-flexible-content .acf-input .acf-label label {
+    font-weight: 500!important;
+    font-size: 16px;
+}
+.edit-post-layout__content .acf-field.acf-field-flexible-content span.acfe-layout-title-text {
+    font-weight: normal;
+    font-size: 16px;
+}
+.edit-post-layout__content .acf-flexible-content .layout .acf-fc-layout-handle {
+    padding: 16px;
+}
+.edit-post-layout__content .acf-flexible-content .layout .acf-fc-layout-controls {
+    top: 16px;
+}
+.edit-post-layout__content .acf-flexible-content .layout .acf-fc-layout-order {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 25px;
+    margin: 0 5px 0 0;
+    background: rgba(33, 147, 210, 0.5);
+    color: #fff;
+}
+.edit-post-layout__content .acf-image-select .item-title, .edit-post-layout__content ul.acf-radio-list li label {
+    color: #1B1B1B;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.06px;
+    line-height: 17px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.edit-post-layout__content .acf-image-select-list .acf-image-select .acf-image-select-selected img, .edit-post-layout__content .acf-image-select-list .acf-image-select img:hover, .edit-post-layout__content ul.acf-radio-list li label.selected img, .edit-post-layout__content ul.acf-radio-list li:hover img {
+    border: solid 1px #00B295; 
+}
+.edit-post-layout__content .acf-image-select-list .acf-image-select img, .edit-post-layout__content ul.acf-radio-list li img {
+    border: solid 1px #ECECEC;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #ECECEC;
+    padding: 15px;
+    max-height: 180px;
+}
+.edit-post-layout__content ul.acf-radio-list li {
+    margin: 5px!important;
+}
+.edit-post-layout__content ul.acf-radio-list li input {
+    display: none;
+}
+.edit-post-layout__content .acf-fields.-left>.acf-field:before {
+    content: "";
+    display: block;
+    position: absolute;
+    z-index: 0;
+    background: none;
+    border-color: none;
+    border-style: solid;
+    border-width: 0 0 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 20%;
+}
+.edit-post-layout__content .acf-fields>.acf-field {
+    border-top: none;
+}
+.edit-post-layout__content .acf-fields.-left>.acf-field>.acf-label {
+    width: 15%;
+}
+.edit-post-layout__content .acf-flexible-content .acf-input-wrap input, .edit-post-layout__content .acf-fields .select2-selection__rendered {
+    height: 45px!important;
+    border-radius: 5px;
+    border: 1px solid #DDE4E8;
+    padding: 10px!important;
+}
+.edit-post-layout__content .acf-fields .select2-container .select2-selection--single {
+    height: 45px;
+}
+.edit-post-layout__content .acf-fields .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    margin-top: 8px;
+}
+.edit-post-layout__content .acf-flexible-content .acf-input textarea {
+    border-radius: 5px;
+    border: 1px solid #DDE4E8;
+    padding: 10px!important;
+}
+.edit-post-layout__content .acf-repeater.-row > table > tbody > tr > td:first-of-type, .edit-post-layout__content .acf-repeater.-block > table > tbody > tr > td:first-of-type {
+    border-left: none!important;
+}
+.edit-post-layout__content .acf-repeater .acf-row-handle.order {
+    background: none;
+    color: #aaa;
+    border: none!important;
+    text-shadow: #fff 0 1px 0;
+}
+.edit-post-layout__content .acf-repeater.-row > table > tbody > tr > td:last-of-type, .edit-post-layout__content .acf-repeater.-block > table > tbody > tr > td:last-of-type {
+    border-right: none!important;
+}
+.edit-post-layout__content .acf-repeater .acf-row-handle.order+td {
+    border: none!important;
+}
+.edit-post-layout__content .acf-image-uploader .image-wrap img {
+    background: none;
+}
+.edit-post-layout__content .layout > .acfe-flexible-opened-actions {
+    border-top: none;
+}
+.edit-post-layout__content .acf-field.acf-field-flexible-content > .acf-input > .acf-flexible-content > .acfe-flexible-stylised-button, .edit-post-layout__content .acf-field-repeater > .acf-input > .acf-repeater > .acfe-repeater-stylised-button {
+    padding: 10px;
+    border: #BDC8D3 dotted 2px;
+    text-align: center;
+    border-radius: 5px;
+}
+.edit-post-layout__content .acfe-flexible-stylised-button a.acf-button.button, .edit-post-layout__content .acfe-repeater-stylised-button a.acf-button.button {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.36px;
+    line-height: 30px;
+    color: #00B295;
+    border: none;
+    box-shadow: none;
+    background: none;
+    vertical-align: middle!important;
+    height: 30px;
+}
+.edit-post-layout__content .acf-repeater .acf-row-handle.remove {
+    background: none;
+    border: none!important;
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-title {
+    border-top-left-radius: 10px;
+    border: none;
+    border-top-right-radius: 10px;
+    padding: 50px 50px 0;
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-content {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.edit-post-layout__content .acfe-modal-wrapper {
+    width: 80%!important;
+}
+.edit-post-layout__content .acfe-modal-content li a {
+    padding: 12px!important;
+    border: 1px solid #DDE4E8!important;
+    border-radius: 5px;
+    color: #1B1B1B!important;
+    font-family: "Helvetica Neue";
+    font-size: 16px;
+    letter-spacing: 0.07px;
+    line-height: 18px;
+    background: #fff!important;
+}
+.edit-post-layout__content .acfe-modal-content li a span {
+    font-weight: normal!important;
+    text-align: left!important;
+}
+.edit-post-layout__content .acfe-modal-content li a:hover, .acfe-modal-content li a:focus {
+    border: 1px solid #00B295!important;
+    background: none!important;
+}
+.edit-post-layout__content .acfe-modal-content ul {
+    padding-left: 0;
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-content .acfe-flex-container {
+    padding: 30px 50px 50px;
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-title span {
+    color: #1B1B1B!important;
+    font-family: "Helvetica Neue";
+    font-size: 21px;
+    font-weight: bold!important;
+    letter-spacing: 0.09px;
+    line-height: 26px!important;
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-title > button.close {
+    color: #626262!important;
+}
+.edit-post-layout__content .acfe-flexible-stylised-button a.acf-button.button:before, .edit-post-layout__content .acfe-repeater-stylised-button a.acf-button.button:before {
+    content: "";
+    background: url(/app/themes/template-builder/assets/images/add-green.svg) no-repeat;
+    content: "";
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 20px;
+    margin: 0 auto -2px;
+    background-position: bottom;
+}
+.edit-post-layout__content .acf-row .acf-input a.button {
+    background: #00B295;
+    border: none;
+    box-shadow: none;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    line-height: 40px;
+    text-align: center;
+    height: 40px;
+    padding: 0 30px;
+}
+.edit-post-layout__content .acf-row .acf-input a.button:hover {
+    background: #00B295;
+    color: #fff;
+    border: none;
+}
+.edit-post-layout__content .acf-actions a.button:hover, .edit-post-layout__content .acf-actions a.button  {
+    background: none!important;
+    color: #00B295!important;
+    box-shadow: none;
+    text-shadow: none;
+    border-color: #5b7b76;
+}
+.edit-post-layout__content .acfe-modal.-open {
+    background: rgba(0,0,0,0.8);
+}
+.edit-post-layout__content .acfe-modal.-open .acfe-modal-content .acfe-flex-container ul li {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 20px;
+}
+.edit-post-layout__content .acfe-flexible-opened-actions a {
+    background: #00B295!important;
+    border: none;
+    box-shadow: none!important;
+    color: #fff!important;
+    font-size: 14px!important;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+    line-height: 40px!important;
+    text-align: center;
+    height: 40px!important;
+    padding: 0 30px!important;
+}
+.edit-post-layout__content .acf-repeater.-row > table > tbody > tr > td, .edit-post-layout__content .acf-repeater.-block > table > tbody > tr > td {
+    border-top: none !important;
+    border-bottom: none !important;
+}
+.edit-post-layout__content .acf-input-wrap {
+    height: 45px!important;
+}
+.edit-post-layout__content .acf-row .acf-input .wp-media-buttons a.button {
+    background: #f7f7f7;
+    line-height: 26px;
+    border-color: #cccccc;
+    box-shadow: 0 1px 0 #cccccc;
+    height: auto;
+    padding: 0 7px;
+    color: #555;
+    font-weight: normal;
+    font-size: 13px;
+    border: 1px solid #ccc;
+}
+.edit-post-layout__content .acf-row .acf-input .wp-media-buttons a.button  .gform_media_icon {
+    height: 26px!important;
+}
+
+/* Show Radio Buttons */
+
+.show-radio-button ul.acf-radio-list li label {
+    display: inline-flex;
+    flex-direction: unset;
+}
+
+.show-radio-button ul.acf-radio-list li label input {
+    display: block;
+}

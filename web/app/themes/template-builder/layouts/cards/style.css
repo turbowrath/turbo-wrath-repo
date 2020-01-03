@@ -1,0 +1,39 @@
+/**
+ * Hero Layout
+ */
+ .layout-card{
+    background:#fafafa;
+    padding:50px 0;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+}
+.layout-card h1 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-bottom: 0;
+    color: #000;
+}
+.layout-card h3 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 0;
+    color: #000;
+}
+.layout-card a {
+    color: #fff;
+    border: 1px solid #0073aa;
+    text-decoration: none;
+    background: #0073aa;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: normal;
+    text-transform: uppercase;
+}
+/**
+ * Preview mode
+ */
+.layout-hero.is-preview{
+    
+}

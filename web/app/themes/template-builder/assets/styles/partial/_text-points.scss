@@ -1,0 +1,26 @@
+.text-points {
+    h3 {
+        &.align-left {
+            img {
+                display: block;
+                margin-bottom: 10px;
+            }
+        }
+
+        &.align-center {
+            img {
+                display: block;
+                margin: 0 auto 10px;
+            }
+        }
+
+        &.align-title {
+            align-items: center;
+            display: flex;
+
+            img {
+                margin-right: 20px;
+            }
+        }
+    }
+}

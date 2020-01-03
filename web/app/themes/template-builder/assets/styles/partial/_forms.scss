@@ -1,0 +1,68 @@
+$form-select-border-color: #a1a1a4;
+$form-select-background-color: #fff;
+
+.contact-form {
+    .form-input {
+        float: left;
+        margin: 0;
+        max-width: 45%;
+        padding-right: 5% !important;
+        width: 100%;
+
+        label .gfield_required { // scss-lint:disable SelectorFormat
+            display: none;
+        }
+    }
+
+    .gform_fields { // scss-lint:disable SelectorFormat
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .full-width {
+        max-width: 100%;
+        width: 100%;
+
+        textarea {
+            padding-top: 10px !important;
+        }
+    }
+
+    .form-input input,
+    .form-input select {
+        background-color: $form-select-background-color;
+        border: 1px solid $form-select-border-color;
+        box-sizing: border-box;
+        height: 40px;
+        padding: 25px 5px !important;
+        width: 100% !important;
+    }
+
+    .full-width input,
+    .full-width select,
+    .full-width textarea {
+        text-indent: 8px;
+        width: 100% !important;
+    }
+
+    &_wrapper {
+        margin-top: 0 !important;
+    }
+}
+
+.form-block {
+    h3 {
+        color: $dark-gray;
+        font-family: $pt-sans;
+        font-size: 24px;
+        font-weight: bold;
+        letter-spacing: .29px;
+        line-height: 32px;
+    }
+
+    .forms-content {
+        p {
+            margin-bottom: 0 !important;
+        }
+    }
+}

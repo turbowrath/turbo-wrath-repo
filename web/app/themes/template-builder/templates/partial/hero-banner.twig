@@ -1,0 +1,84 @@
+{% if tb.banner_layout == 'text-left-img-right' %}
+	<div class="uk-width-1-1 hero-banner">
+		<div class="uk-grid hero-banner" style="
+			background: url({{ TimberImage(tb.background_image).src|resize(1800,400) }}) no-repeat;
+			background-color: {{ tb.background_color }};
+			background-size: cover;
+			background-position: center;
+			min-height: 400px;">
+			<div class="uk-width-1-2">
+				<div>
+					<h2>{{ tb.heading }}</h2>
+					<p>{{ tb.text }}</p>
+				</div>
+				{% for btn in tb.buttons %}
+					{% if btn.button.url or btn.button.target or btn.button.title %}
+						<a href="{{ btn.button.url }}" target="{{ btn.button.target }}">
+							<button type="button">
+								{{ btn.button.title }}</button>
+						</a>
+					{% endif %}
+
+				{% endfor %}
+			</div>
+			<div class="uk-width-1-2">
+				<img src="{{ TimberImage(tb.image).src|resize(400,400) }}" alt="s">
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% if tb.banner_layout == 'img-left-text-right' %}
+	<div class="uk-width-1-1 img-left-text-right">
+		<div class="uk-grid hero-banner" style="
+			background: url({{ TimberImage(tb.background_image).src|resize(1800,400) }}) no-repeat;
+			background-color: {{ tb.background_color }};
+			background-size: cover;
+			background-position: center;
+			min-height: 400px;">
+			<div class="uk-width-1-2">
+				<img src="{{ TimberImage(tb.image).src|resize(400,400) }}" alt="s">
+			</div>
+			<div class="uk-width-1-2">
+				<div>
+					<h2>{{ tb.heading }}</h2>
+					<p>{{ tb.text }}</p>
+				</div>
+				{% for btn in tb.buttons %}
+					{% if btn.button.url or btn.button.target or btn.button.title %}
+						<a href="{{ btn.button.url }}" target="{{ btn.button.target }}">
+							<button type="button">
+								{{ btn.button.title }}</button>
+						</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endif %}
+
+{% if tb.banner_layout == 'center-text' %}
+	<div class="uk-width-1-1 hero-banner">
+		<div class="uk-grid hero-banner" style="
+			background: url({{ TimberImage(tb.background_image).src|resize(1800,400) }}) no-repeat;
+			background-color: {{ tb.background_color }};
+			background-size: cover;
+			background-position: center;
+			min-height: 400px;">
+			<div class="">
+				<div>
+					<h2>{{ tb.heading }}</h2>
+					<p>{{ tb.text }}</p>
+				</div>
+				{% for btn in tb.buttons %}
+					{% if btn.button.url or btn.button.target or btn.button.title %}
+						<a href="{{ btn.button.url }}" target="{{ btn.button.target }}">
+							<button type="button">
+								{{ btn.button.title }}</button>
+						</a>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+{% endif %}

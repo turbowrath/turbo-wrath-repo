@@ -1,0 +1,51 @@
+{% if tb.style_preview == 'quotes' %}
+    {% set quoteStyle = 'quote-basic' %}
+{% elseif tb.style_preview == 'quotesWithLine' %}
+    {% set quoteStyle = 'quote-with-line' %}
+{% elseif tb.style_preview == 'quotesInCard' %}
+    {% set quoteStyle = 'quote-in-card' %}
+{% endif %}
+
+{% set fullWidth = tb.number_of_quotes == 1 %}
+{# <pre>{{dump(fullWidth)}}</pre> #}
+
+<div class='uk-width-1-1 quotes-block'>
+    {% if tb.number_of_quotes >= 1 %}
+        <div class='quote {{quoteStyle}}'>
+            <div class="quote-icon-wrapper">
+                <i class="fa fa-quote-left"></i>
+            </div>
+            <div class="testimonial">{{tb.quote_1.testimonial}}</div>
+            <div class="from-wrapper">
+                <div class="name">{{tb.quote_1.name}}</div>
+                <div class="position">{{tb.quote_1.position}}</div>
+            </div>
+        </div>
+    {% endif %}
+    
+    {% if tb.number_of_quotes >= 2 %}
+        <div class='quote {{quoteStyle}}'>
+            <div class="quote-icon-wrapper">
+                <i class="fa fa-quote-left"></i>
+            </div>
+            <div class="testimonial">{{tb.quote_2.testimonial}}</div>
+            <div class="from-wrapper">
+                <div class="name">{{tb.quote_2.name}}</div>
+                <div class="position">{{tb.quote_2.position}}</div>
+            </div>
+        </div>
+    {% endif %}
+
+    {% if tb.number_of_quotes >= 3 %}
+        <div class='quote {{quoteStyle}}'>
+            <div class="quote-icon-wrapper">
+                <i class="fa fa-quote-left"></i>
+            </div>
+            <div class="testimonial">{{tb.quote_3.testimonial}}</div>
+            <div class="from-wrapper">
+                <div class="name">{{tb.quote_3.name}}</div>
+                <div class="position">{{tb.quote_3.position}}</div>
+            </div>
+        </div>
+    {% endif %}
+</div>

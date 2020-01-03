@@ -1,0 +1,24 @@
+<div class="uk-width-1-1 accordion-block">
+    <div class="uk-container uk-padding">
+        <h1 class="uk-margin-medium uk-margin-remove-top uk-margin-remove-left uk-margin-remove-right">
+            {{ tb.accordion_title }}
+        </h1>
+        <ol class="accordion" uk-accordion="active: 0">
+        {% set count = 0 %}
+        {% for accordion_item in accor_array %}
+            <li class="uk-margin-medium uk-margin-remove-bottom" {% if accordion_item.attributes.hasClass('uk-open') %}{% endif %} >
+                <a class="uk-accordion-title h2" href="#">
+                    {{ accor_numbered ? (count + 1) ~ '. ' : '' }}{{ accordion_item.accordion_title ? accordion_item.accordion_title : (accordion_item.question ? accordion_item.question : accordion_item.title) }}
+                </a>
+                <div class="uk-accordion-content uk-padding-bottom">
+                    {{ accordion_item.accordion_content ? accordion_item.accordion_content : (accordion_item.answer ? accordion_item.answer : accordion_item.content) }}
+                    {% if accordion_item.read_more.add_a_read_more_button %}
+                    <p><a href="{{ accordion_item.read_more.button_link }}" class="button-read-more-purple" target="{{ accordion_item.read_more.open_link_in_new_tab ? '_blank' : '_self' }}" rel="noopener noreferrer">{{ accordion_item.read_more.button_text }}</a></p>
+                    {% endif %}
+                </div>
+            </li>
+            {% set count = count + 1 %}
+        {% endfor %}
+        </ol>
+    </div>
+</div>

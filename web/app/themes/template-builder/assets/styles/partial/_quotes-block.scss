@@ -1,0 +1,37 @@
+$card-color: #ffe8a6;
+
+.quotes-block {
+    display: flex;
+    justify-content: center;
+
+    .quote {
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        margin: 40px;
+        padding: 40px;
+
+        .from-wrapper {
+            margin-top: auto;
+
+            .name {
+                font-weight: 600;
+            }
+        }
+
+        &-icon-wrapper {
+            i {
+                font-size: 37px;
+            }
+        }
+        // Quote Style Preview
+
+        // &-basic {
+        //
+        // }
+
+        &-in-card { background-color: $card-color; }
+
+        // Quote Style Preview End
+    }
+}

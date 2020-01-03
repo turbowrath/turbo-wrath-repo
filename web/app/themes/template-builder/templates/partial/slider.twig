@@ -1,0 +1,32 @@
+<div class="slider uk-width-1-1 slider-is-{{ tb.slider_layout }}" uk-slider>
+    {% if tb.slider_layout == 'containerWidth' %}
+    <div class="uk-container">
+    {% endif %}
+        <div class="slider-wrap">
+            <div class="uk-slider-container">
+                <ul class="uk-slider-items">
+                    {% for si in tb.slider_images %}
+                    <li><img src="{{ si.image|resize(1200, 400) }}" alt="{{ si.image }}"></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% if tb.navigation_settings.show_arrows %}
+            <div class="slider-arrows {% if tb.navigation_settings.arrows_outside %}arrows-outside{% else %}arrows-inside{% endif %} arrows-position-{{ tb.navigation_settings.arrows_position }}">
+                <a class="uk-position-center-left{% if tb.navigation_settings.arrows_outside %}-out{% endif %} uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slidenav-large uk-slider-item="previous"></a>
+                <a class="uk-position-center-right{% if tb.navigation_settings.arrows_outside %}-out{% endif %} uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slidenav-large uk-slider-item="next"></a>
+            </div>
+            {% endif %}
+            {% if tb.navigation_settings.show_dots %}
+            <ul class="uk-dotnav {% if tb.navigation_settings.dots_outside %}dots-outside{% else %}dots-inside{% endif %} dots-position-{{ tb.navigation_settings.dots_position }}">
+                {% set slideNum = -1 %}
+                {% for si in tb.slider_images %}
+                    {% set slideNum = slideNum + 1 %}
+                    <li uk-slider-item="{{ slideNum }}"><a href="#"></a></li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+    {% if tb.slider_layout == 'containerWidth' %}
+    </div>
+    {% endif %}
+</div>

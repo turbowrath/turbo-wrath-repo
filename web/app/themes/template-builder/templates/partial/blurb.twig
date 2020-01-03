@@ -1,0 +1,68 @@
+<div class="uk-width-1-1 blurb">
+	{% set blurbNames = ['blurb_one', 'blurb_two', 'blurb_three', 'blurb_four', 'blurb_five' ] %}
+	{% set blurbIndex = blurbNames[tb.number_of_cards - 1] %}
+
+	<div class="uk-child-width-1-5 uk-flex-center" uk-grid>
+		{% for blurb in tb[blurbIndex] %}
+			{% if tb.layout == 'icon' %}
+				<div>
+					<div class="uk-card uk-card-default uk-card-body
+						{{ tb.style_preview == 'icon-heading-text-center' ? 'uk-text-center' : 'blurb-card' }}
+						{{ tb.style_preview == 'icon-overlap-heading-text-center' ? 'uk-text-center blurb-card-overlap' : 'blurb-card' }}">
+						{% if blurb.image %}
+							<img src="{{ TimberImage(blurb.image).src|resize(140,140) }}" class="{{ tb.style_preview == 'icon-overlap-heading-text-center' ? 'blurb-image-overlap' : 'blurb-image' }}" alt="image">
+						{% endif %}
+						<h3 class="uk-card-title">{{ blurb.heading }}</h3>
+						<p>{{ blurb.text }}</p>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if tb.layout == 'image' %}
+				<div>
+					<div class="uk-card uk-card-default">
+						<div class="uk-card-media-top">
+							{% if blurb.image %}
+								<img src="{{ TimberImage(blurb.image).src }}" alt="image" class="full-width">
+							{% endif %}
+						</div>
+						<div class="uk-card-body">
+							<h3 class="uk-card-title">{{ blurb.heading }}</h3>
+							{% if tb.style_preview != 'card-img-heading-readmore' %}
+								<p>{{ blurb.text }}</p>
+							{% endif %}
+							{% for btn in blurb.buttons %}
+								{# Check if button field has value #}
+								{% if btn.select_link.title or btn.select_link.url or btn.select_link.target %}
+									{% if tb.style_preview == 'card-img-heading-readmore' %}
+										<a href="{{ btn.select_link.url }}" target="{{ btn.select_link.target }}" class="read-more">
+											Read More
+											<span>
+												<i class="fa fa-long-arrow-right"></i>
+											</span>
+										</a>
+									{% else %}
+										<a class="uk-button uk-button-default" href="{{ btn.select_link.url }}" target="{{ btn.select_link.target }}">
+											{{ btn.select_link.title }}
+										</a>
+									{% endif %}
+								{% endif %}
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+			{% endif %}
+
+			{% if tb.layout == 'no-img' %}
+				<div>
+					<div class="uk-card uk-card-small uk-card-default uk-card-body
+						{{ tb.border_position == 'left' ? 'uk-text-left border-left' : 'uk-text-center border-bottom' }}">
+						<h3 class="uk-card-title">{{ blurb.heading }}</h3>
+						<p>{{ blurb.text }}</p>
+					</div>
+				</div>
+			{% endif %}
+
+		{% endfor %}
+	</div>
+</div>

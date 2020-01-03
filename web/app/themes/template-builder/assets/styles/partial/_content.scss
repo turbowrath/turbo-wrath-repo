@@ -1,0 +1,22 @@
+$content-color: #727677;
+
+.content {
+    &-layout {
+        .heading {
+            color: $dark-gray;
+            font-family: $pt-sans;
+            font-size: 40px;
+            font-weight: bold;
+            letter-spacing: .29px;
+            line-height: 52px;
+        }
+
+        .content {
+            color: $content-color;
+            font-family: $pt-sans;
+            font-size: 18px;
+            letter-spacing: .2px;
+            line-height: 30px;
+        }
+    }
+}

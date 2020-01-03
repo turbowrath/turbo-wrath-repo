@@ -1,0 +1,36 @@
+$border-color: rgba(0, 0, 0, .1);
+
+.card {
+    &_content {
+        display: flex;
+        flex-direction: row;
+        padding: 10px 40px 40px;
+    }
+
+    &_img {
+        flex: 1;
+        margin-right: 3%;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &_text {
+        flex: 2;
+
+        .btn {
+            margin-top: 40px;
+        }
+    }
+
+    &_block {
+        background: $white;
+        border: 1px solid $border-color;
+        border-radius: 5px;
+
+        h3 {
+            padding: 30px 40px 0;
+        }
+    }
+}

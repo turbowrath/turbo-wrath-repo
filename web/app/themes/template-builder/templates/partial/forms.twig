@@ -1,0 +1,13 @@
+<div class="uk-width-1-1 forms-layout">
+    <div class="uk-container uk-padding">
+        <div class="form-block">
+            <h3>{{ tb.title }}</h3>
+            <div class="forms-content">{{ tb.text }}</div>
+            <div class="uk-container cbform">
+              {% filter shortcodes %}
+                {{ tb.form }}
+              {% endfilter %}
+            </div>
+        </div>
+    </div>
+</div>

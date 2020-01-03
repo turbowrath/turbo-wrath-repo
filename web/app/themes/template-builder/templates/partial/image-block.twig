@@ -1,0 +1,9 @@
+<div class="uk-width-1-1 image-block">
+    {% if tb.layout == 'oneImage' %}
+        <div>
+            {% if tb.title != '' %}<h2 class="image-block-title">{{tb.title}}</h2>{% endif %}
+            {% if tb.text != '' %}<div class="image-block-text">{{tb.text}}</div>{% endif %}
+            <img class="image-block-image" src="{{TimberImage(tb.image).src}}"/>
+        </div>
+    {% endif %}
+</div>

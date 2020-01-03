@@ -1,0 +1,4 @@
+name: gloc9lando
+recipe: wordpress
+config:
+  webroot: web

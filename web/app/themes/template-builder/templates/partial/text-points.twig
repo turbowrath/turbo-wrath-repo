@@ -1,0 +1,31 @@
+<div class="text-points uk-width-1-1">
+    <div class="uk-container">
+        {% if tb.text_alignment == 'left' %}
+        <div class="uk-grid uk-flex-between">
+        {% elseif tb.text_alignment == 'center' %}
+        <div class="uk-grid uk-flex-between uk-text-center">
+        {% endif %}
+            {% for items in tb.text_points_items %}
+            <div class="uk-width-1-3">
+                {% if items.use_illustration == true %}
+                <img src="{{ items.illustration }}" alt="{{ items.illustration }}">
+                {% endif %}
+                {% if items.title_group.title %}
+                <h3 class="{{ items.title_group.icon_position }}">
+                    {% if items.use_illustration == false %}
+                    {% if items.title_group.icon %}
+                    <img src="{{ items.title_group.icon }}" alt="{{ items.title_group.icon }}">
+                    {% endif %}
+                    {% endif %}
+                    {{ items.title_group.title }}
+                </h3>
+                {% endif %}
+                {% if items.text %} {{ items.text }} {% endif %}
+                {% if items.text_button %}
+                <a href="{{ items.text_button.link }}">{{ items.text_button.label }}</a>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>

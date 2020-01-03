@@ -1,0 +1,17 @@
+<div class="uk-width-1-1 button-block">
+	<div 
+		class="uk-flex
+		{% if tb.layout == 'center' %} uk-flex-center
+		{% elseif tb.layout == 'rightAlign' %} uk-flex-right
+		{% elseif tb.layout == 'leftAlign' %} uk-flex-left
+		{% endif %}"
+		>
+		{% for btn in tb.buttons %}
+			{% if btn.button.title or btn.button.url or btn.button.target %}
+				<a class="uk-button uk-button-default" href="{{ btn.button.url }}" target="{{ btn.button.target }}">
+					{{ btn.button.title }}
+				</a>
+			{% endif %}
+		{% endfor %}
+	</div>
+</div>

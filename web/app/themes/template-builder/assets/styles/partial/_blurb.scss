@@ -1,0 +1,39 @@
+.blurb {
+    @function halve($px) {
+        @return calc(#{$px} / 2);
+    }
+
+    $card-margin: '40px';
+    $image-height: '140px';
+
+    &-card {
+        &-overlap {
+            margin-top: halve($image-height);
+        }
+    }
+
+    &-image {
+        &-overlap {
+            margin-top: -#{calc(#{halve($image-height)} + 40px)};
+        }
+    }
+
+    .uk-card {
+        border-radius: 5px;
+    }
+
+    .read-more {
+        color: $dark-gray;
+        text-decoration: none;
+    }
+
+    .border {
+        &-left {
+            border-left: 4px solid $light-gray;
+        }
+
+        &-bottom {
+            border-bottom: 4px solid $light-gray;
+        }
+    }
+}

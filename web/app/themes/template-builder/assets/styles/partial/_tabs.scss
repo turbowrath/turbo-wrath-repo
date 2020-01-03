@@ -1,0 +1,44 @@
+// Style the tab
+.tab {
+    $tab-border: #ccc;
+    $tab-background: #f1f1f1;
+    $button-hover: #ddd;
+
+    background-color: $tab-background;
+    border: 1px solid $tab-border;
+    overflow: hidden;
+
+    button {
+        background-color: inherit;
+        border: 0;
+        border-radius: 0;
+        color: $dark-gray;
+        cursor: pointer;
+        float: left;
+        font-size: 18px;
+        outline: none;
+        padding: 14px 16px;
+        transition: .3s;
+
+        &:hover {
+            background-color: $button-hover;
+        }
+
+        &.active {
+            background-color: $tab-border;
+            font-weight: 500;
+        }
+    }
+
+    &content {
+        border: 1px solid $tab-border;
+        border-top: 0;
+        display: none;
+        flex-direction: column;
+    }
+
+    &-title {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+}

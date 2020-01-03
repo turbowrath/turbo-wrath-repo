@@ -1,0 +1,17 @@
+<div class="uk-width-1-1 video-block">
+    {% if tb.layout == 'simpleVideoBlock' %}
+        <div>
+            {% if tb.title != '' %}<h2 class="video-block-title">{{tb.title}}</h2>{% endif %}
+            {% if tb.text != '' %}<div class="video-block-text">{{tb.text}}</div>{% endif %}
+            <div class="video-wrapper">
+                {% if tb.video_type == 'embeddedUrl' %}
+                    {{tb.video_url}}
+                {% elseif tb.video_type == 'shortcode' %}
+                    {% filter shortcodes %}
+                        {{tb.video_shortcode}}
+                    {% endfilter %}
+                {% endif %}
+            </div>
+        </div>
+    {% endif %}
+</div>

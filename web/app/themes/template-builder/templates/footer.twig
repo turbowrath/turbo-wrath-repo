@@ -1,0 +1,41 @@
+<div class="uk-container uk-flex">
+    <div class="footer-logo uk-width-auto uk-flex uk-flex-column uk-flex-start uk-margin-large-top">
+        <div class="site-footer-logo">
+            {% if options.footer_logo != '' %}
+                <a class="uk-logo" href="{{site.url}}">
+                    <img width="auto" height="auto" src="{{ options.footer_logo }}" alt="{{ options.site_logo|split('/')|last }}">
+                </a>
+            {% else %}
+                <h1 class="hdr-logo" role="banner">
+                    <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+                </h1>
+            {% endif %}
+        </div>
+    </div>
+
+    <div class="uk-width-expand uk-flex uk-flex-middle uk-flex-center uk-margin-large-top">
+        <ul class="footer-menu">
+            {% for item in function('get_menu', 'Footer Menu').get_items %}
+                <li class="footer-menu-item footer-menu-item-button uk-margin-large-right">
+                    <span class="uk-height-1-1">
+                        <a href="{{ item.link }}" class="button-medium-padding {{ item.custom.button_class }}">{{ item.title }}</a>
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="footer-soc-med uk-width-1-5 uk-margin-large-top">
+        <h3>CONNECT WITH US</h3>
+        <div>
+        {% for item in options.social_media %}
+            <a href="{{item.social_link}}" target="_blank">
+                <img width="auto" height="auto" src="{{ item.social_icon }}" alt="{{ item.social_icon|split('/')|last }}">
+            </a>
+        {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="uk flex uk-container uk-flex-center uk-text-center uk-margin-top">
+    <div class="copyright uk-padding-small uk-padding-remove-horizontal">© {{"now"|date('Y')}} {{ options.copyright_message }}</div>
+</div>

@@ -1,0 +1,28 @@
+<div class="uk-width-1-1 card-layout">
+    <div class="uk-container uk-padding">
+        {% for item in tb.cards %}
+            <div class="card_block">
+                <h3>{{ item.heading }}</h3>
+                <hr>
+
+                <div class="card_content">
+                    <div class="card_img">
+                    <img src="{{TimberImage(item.image).src}}">
+                    </div>
+                    <div class="card_text">
+                        {{ item.content }}
+                        {% for i in item.buttons %}
+                            {% if i.select_link.title or i.select_link.url or i.select_link.target %}
+                            <div class="btn">
+                                <form action="{{ i.select_link.url }}" method="get" target="{{ i.select_link.target }}">
+                                    <button type="submit">{{  i.select_link.title }}</button>
+                                </form>
+                            </div>
+                            {% endif %}
+                        {% endfor %}				
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>

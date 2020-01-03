@@ -1,0 +1,29 @@
+<div class="uk-width-1-1 content-layout">
+    <div class="uk-container uk-padding">
+        <div class="content" style="
+        {% if tb.style_layout == "heading-on-side" %}
+        display: flex;
+        flex-direction: row;
+        {% elseif tb.style_layout == "heading-on-top" %}
+        display: flex;
+        flex-direction: column;
+        {% endif %}
+        ">  
+        <div class="heading" style="
+        {% if tb.style_layout == "heading-on-side" %}
+        flex: 1;
+        margin-right: 2%;
+        {% else %}
+        margin-bottom: 20px;
+        {% endif %}
+        ">{{ tb.heading }}</div>
+        <div class="content" style="
+        {% if tb.style_layout == "heading-on-side" %}
+        flex: 2;
+        {% elseif tb.style_layout == "two-columns-content" %}
+        column-count: 2;
+        {% endif %}
+        ">{{ tb.content }}</div>
+        </div>
+    </div>
+</div>

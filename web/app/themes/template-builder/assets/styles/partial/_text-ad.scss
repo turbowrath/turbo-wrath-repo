@@ -1,0 +1,43 @@
+.text-ad {
+    background: $black;
+    color: $white;
+    font-size: 20px;
+    padding: 30px;
+
+    p {
+        margin-bottom: 0;
+    }
+
+    a {
+        color: $white;
+        font-weight: 700;
+    }
+
+    &.big-text-description-link {
+        align-items: center;
+        display: flex;
+
+        p {
+            font-size: 25px;
+        }
+
+        .hightlights {
+            span {
+                font-size: 90px;
+                font-weight: 700;
+                padding-right: 40px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 639px) {
+        &.big-text-description-link {
+            flex-wrap: wrap;
+
+            .hightlights {
+                text-align: center;
+                width: 100%;
+            }
+      }
+    }
+}

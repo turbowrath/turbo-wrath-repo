@@ -1,0 +1,63 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	
+	{# Content Blocks #}
+  	<div class="uk-flex uk-flex-wrap content-blocks">
+  	{% for tb in post.get_field('template_builder') %}
+
+		{# Hero Banner #}
+		{% if tb.acf_fc_layout == 'hero_banner' %}
+			{% include 'partial/hero-banner.twig' %}
+		{# Button Block #}
+		{% elseif tb.acf_fc_layout == 'button_block' %}
+			{% include 'partial/button-block.twig' %}
+		{# Image Block #}
+		{% elseif tb.acf_fc_layout == 'image_block' %}
+			{% include 'partial/image-block.twig' %}
+		{# Tabs Block #}
+		{% elseif tb.acf_fc_layout == 'tabs' %}
+			{% include 'partial/tabs.twig' %}
+		{# Video Block #}
+		{% elseif tb.acf_fc_layout == 'video_block' %}
+			{% include 'partial/video-block.twig' %}
+		{# Content Block #}
+		{% elseif tb.acf_fc_layout == 'content' %}
+			{% include 'partial/content.twig' %}
+		{# Text Points #}
+		{% elseif tb.acf_fc_layout == 'text_points' %}
+			{% include 'partial/text-points.twig' %}
+		{# Cards #}
+		{% elseif tb.acf_fc_layout == 'cards' %}
+			{% include 'partial/cards.twig' %}	
+		{# Forms #}
+		{% elseif tb.acf_fc_layout == 'forms' %}
+			{% include 'partial/forms.twig' %}
+		{# Profile Card #}
+		{% elseif tb.acf_fc_layout == 'profile_card' %}
+			{% include 'partial/profile-card.twig' %}
+		{# Slider #}
+		{% elseif tb.acf_fc_layout == 'slider' %}
+			{% include 'partial/slider.twig' %}	
+		{# Accordion #}
+		{% elseif tb.acf_fc_layout == 'accordion' %}
+			{% include 'partial/accordion.twig' with { 'accor_array' : tb.accordion_items } %}
+		{# Text Ad #}
+		{% elseif tb.acf_fc_layout == 'text_ad' %}
+			{% include 'partial/text-ad.twig' %}	
+		{# Quotes Block #}
+		{% elseif tb.acf_fc_layout == 'quotes_block' %}
+			{% include 'partial/quotes-block.twig' %}	
+		{# Blurb #}
+		{% elseif tb.acf_fc_layout == 'blurb' %}
+			{% include 'partial/blurb.twig' %}
+		{# Table Block #}
+		{% elseif tb.acf_fc_layout == 'table_block' %}
+			{% include 'partial/table-block.twig' %}
+		{% endif %}
+  	{% endfor %}
+  	</div>    
+
+  {# Comment block to test git deployment #}
+
+{% endblock %}

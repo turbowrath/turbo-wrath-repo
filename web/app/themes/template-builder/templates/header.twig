@@ -1,0 +1,42 @@
+{# Header of larger screens #}
+<nav id="large-header" class="uk-container uk-visible@m uk-navbar uk-navbar-container header-nav uk-navbar-transparent" uk-navbar="mode: click">
+    {% if options.site_logo != '' %}
+        <a class="uk-navbar-item uk-logo" href="{{site.url}}">
+            <img width="auto" height="auto" src="{{ options.site_logo }}" alt="{{ options.site_logo|split('/')|last }}">
+        </a>
+    {% else %}
+        <h1 class="hdr-logo" role="banner">
+            <a class="hdr-logo-link" href="{{site.url}}" rel="home">{{site.name}}</a>
+        </h1>
+    {% endif %}
+    <div class="uk-navbar-right">
+        <ul class="uk-navbar-nav main-menu">
+            {% for item in function('get_menu', 'Main Menu').get_items %}
+                {% if item.custom.is_button == '1' %}
+                    <li class="main-menu-item main-menu-item-button">
+                        <span class="uk-flex uk-flex-middle uk-height-1-1">
+                            <a {{ item.is_target_blank or item.is_external ? 'target="_blank"' }} href="{{ item.link }}" class="button-medium-padding {{ item.custom.button_class }}">{{ item.title }}</a>
+                        </span>
+                    </li>
+                {% else %}
+                    <li class="{{ item.classes|join(' ') }} main-menu-item">
+                        <a {{ item.is_target_blank or item.is_external ? 'target="_blank"' }} class="text-black uk-text-bold main-menu-link" href="{{ item.link }}">{{ item.title }}{% if item.get_children %} <i class="fa fa-angle-down" aria-hidden="true"></i>{% endif %}</a>
+                        {% if item.get_children %}
+                        <div class="uk-navbar-dropdown">
+                            <ul class="uk-nav uk-navbar-dropdown-nav">
+                                {% for submenu in item.get_children %}
+                                <li><a {{ item.is_target_blank or item.is_external ? 'target="_blank"' }} href="{{ submenu.link }}">{{ submenu.title }}</a></li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endif %}
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div> 
+
+
+</nav>
+
+{% include 'templates/header-mobile.twig' %}

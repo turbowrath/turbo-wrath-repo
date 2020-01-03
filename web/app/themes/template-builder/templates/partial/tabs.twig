@@ -1,0 +1,39 @@
+<div class="uk-width-1-1 tabs">
+    <div class="uk-container uk-padding">
+        <!-- Tab links -->
+        <div class="tab">
+            {% for t in tb.tabs %}
+                {% if loop.first %}
+                    <button class="tablinks" onclick="openCity(event, '{{ t.title }}')" id="defaultOpen">{{ t.title }}</button>
+                {% else %}
+                <button class="tablinks" onclick="openCity(event, '{{ t.title }}')">{{ t.title }}</button> 
+                {% endif %}     
+            {% endfor %}      
+        </div>
+        
+        {% for t in tb.tabs %}
+            <!-- Tab content -->
+            <div id="{{ t.title }}" class="tabcontent uk-padding">
+                <div class="tab-title">{{ t.title }}</div>
+                <div class="tab-desc">{{ t.content }}</div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+<script>
+function openCity(evt, cityName) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(cityName).style.display = "flex";
+  evt.currentTarget.className += " active";
+}
+document.getElementById("defaultOpen").click();
+</script>

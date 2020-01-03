@@ -1,0 +1,34 @@
+<div class="uk-width-1-1">
+  <div class="uk-container">
+
+  {% set profile_name = ['profile_one', 'profile_two', 'profile_three', 'profile_four', 'profile_five'] %}
+	{% set profile_index = profile_name[tb.number_of_cards - 1] %}
+	
+  {% if tb[profile_index] %}
+    <div class="uk-child-width-1-2@s uk-child-width-1-4@l" uk-grid>
+    {% for item in tb[profile_index] %}
+      <div class="profile-card {{tb.style_preview}}">
+        <div class="photo">
+          <img src="{{item.photo|resize(250, 250)}}">
+        </div>
+        <div class="content">
+          <p class="name">
+            {{ item.name }}
+          </p>
+          <p class="position">
+            {{ item.position }}
+          </p>
+          <p class="address">
+            {% if tb.style_preview == 'style-one'%} &#8212; {% endif %} {{ item.address }}
+          </p>
+          <p class="description">
+            {% if item.description %} "{{ item.description }}" {% endif %}
+          </p>
+        </div>
+      </div>
+    {% endfor %}
+    </div>
+  {% endif %}
+    
+  </div>
+</div>
